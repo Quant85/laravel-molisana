@@ -22,17 +22,54 @@ ul a {
 }
 
 /* #93C7D0 - colore da modificare */
-.navigation {
-  background-color: #003434;
+nav {
+  background-color: #B1D281;
+}
+nav ul {
   display: flex;
+  flex-flow: row wrap;
+}
+nav ul li {
+  padding: 0.8rem;
+}
+nav ul a {
+  font-family: "Roboto", Arial, sans-serif;
+  text-transform: capitalize;
+  font-size: 1.6rem;
+  font-weight: 400;
+  line-height: normal;
+  color: #ffffff;
+  border-bottom: 4px solid transparent;
+}
+nav ul .active {
+  color: #002D75;
+  border-bottom: 4px solid #002D75;
+  transition: all 0.15s cubic-bezier(0.46, 0.12, 0.39, 0.72);
 }
 
-.navigation-left ul {
-  list-style: none;
-  margin: 0;
-  padding-top: 10px;
+nav {
+  background-color: #B1D281;
+}
+nav ul {
   display: flex;
-  justify-content: space-between;
+  flex-flow: row wrap;
+}
+nav ul li {
+  padding: 0.8rem;
+}
+nav ul a {
+  font-family: "Roboto", Arial, sans-serif;
+  text-transform: capitalize;
+  font-size: 1.6rem;
+  font-weight: 400;
+  line-height: normal;
+  color: #ffffff;
+  border-bottom: 4px solid transparent;
+}
+nav ul .active {
+  color: #002D75;
+  border-bottom: 4px solid #002D75;
+  transition: all 0.15s cubic-bezier(0.46, 0.12, 0.39, 0.72);
 }
 
 header {
@@ -46,29 +83,6 @@ header nav {
   display: flex;
   flex-flow: row wrap;
   justify-content: center;
-}
-header nav {
-  background-color: #B1D281;
-}
-header nav ul {
-  display: flex;
-  flex-flow: row wrap;
-}
-header nav ul li {
-  padding: 0.8rem;
-}
-header nav ul a {
-  font-family: "Roboto", Arial, sans-serif;
-  font-size: 1.6rem;
-  font-weight: 400;
-  line-height: normal;
-  color: #ffffff;
-  border-bottom: 4px solid transparent;
-}
-header nav ul a:hover {
-  color: #002D75;
-  border-bottom: 4px solid #002D75;
-  transition: all 0.15s cubic-bezier(0.46, 0.12, 0.39, 0.72);
 }
 
 .main-prodotti {

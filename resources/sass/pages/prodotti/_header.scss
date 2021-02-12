@@ -1,3 +1,6 @@
+
+@import 'components/_navigation';
+
 header {
   @include flex(column, wrap);
   align-content: center;
@@ -6,26 +9,5 @@ header {
     width: 100%;
     @include flex();
     justify-content: center;
-  }
-
-  nav {
-    background-color: $navbar-bg-color;
-    ul {
-      @include flex();
-      li {
-        padding: 0.8rem;
-      }
-      a {
-        font-family: $primary-font;
-        @include text-set(1.6rem, 400, normal);
-        color: $link-color;
-        border-bottom: 4px solid transparent;
-        &:hover{
-          color: $hover-link-color;
-          border-bottom: 4px solid $hover-link-color;
-          @include nav-link-hover();
-        }
-      }
-    }
   }
 }

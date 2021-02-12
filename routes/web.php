@@ -15,18 +15,19 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
 
-    $pages = ['Home' => '/','Prodotti'=>'prodotti-paste','Contatti'=>'contatti'];
+    $pages = ['home' => '/','prodotti'=>'prodotti-paste','contatti'=>'contatti'];
     return view('pages.home.home',compact('pages'));
-});
+})->name('home');
 
 Route::get('prodotti-paste', function () {
     //file_get_contents(path, include_path, context, start, max_length)  legge il contenuto di un file in una stringa e migliora le prestazioni
     $data = file_get_contents('../resources/json/data.json');
     $prodotti = json_decode($data,true);
-    $pages = ['Home' => '/','Prodotti'=>'prodotti-paste','Contatti'=>'contatti'];
+    $pages = ['home' => '/','prodotti'=>'prodotti-paste','contatti'=>'contatti'];
+
     return view('pages.prodotti.prodotti', compact('prodotti','pages'));
-});
+})->name('prodotti');
 
 Route::get('contatti', function () {
     return view('pages.contatti.contatti');
-});
+})->name('prodotti');
