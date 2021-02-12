@@ -1,6 +1,6 @@
 <main class="main-prodotti">
-  @include('pages.prodotti.lunghe')
-  @include('pages.prodotti.corte')
-  @include('pages.prodotti.cortissime')
+  @include('pages.prodotti.section', ['title'=> "LE LUNGHE", 'tipo' => "lunga"])
+  @include('pages.prodotti.section', ['title'=> "LE CORTE", 'tipo' => "corta"])
+  @include('pages.prodotti.section', ['title'=> "LE CORTISSIME", 'tipo' => "cortissima"])
 </main>
 <!-- /.main-prodotti -->

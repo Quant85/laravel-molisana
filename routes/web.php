@@ -24,9 +24,21 @@ Route::get('prodotti-paste', function () {
     $data = file_get_contents('../resources/json/data.json');
     $prodotti = json_decode($data,true);
     $pages = ['home' => '/','prodotti'=>'prodotti-paste','contatti'=>'contatti'];
-
+    //dd($prodotti['data']);
+    //https://laravel.com/docs/7.x/helpers#method-array-where
+    // $lunga = Arr::where($prodotti['data'],function($value,$key){
+    //    return $value['tipo'] == 'lunga';
+    //});
+    //$corta = Arr::where($prodotti['data'],function($value,$key){
+    //    return $value['tipo'] == 'corta';
+    //});
+    //$cortissima = Arr::where($prodotti['data'],function($value,$key){
+    //    return $value['tipo'] == 'cortissima';
+    //});
     return view('pages.prodotti.prodotti', compact('prodotti','pages'));
 })->name('prodotti');
+
+
 
 Route::get('contatti', function () {
     return view('pages.contatti.contatti');
