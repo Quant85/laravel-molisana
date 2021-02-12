@@ -1,0 +1,24 @@
+/* media  */
+$mobile: 550px;
+$tablet: 998px;
+$desktop: 1170px;
+
+$bp-mobile: "(max-width: 550px)";
+$bp-tablet-min: "(min-width: 551px)";
+$bp-tablet-max: "(max-width: 998px)";
+$bp-desktop-min: "(min-width: 999px)";
+
+$wscale-fat: calc((922 / 1170) * 100%);
+
+$colums:12;
+
+@mixin col-x {
+    @for $i from 1 through $colums {
+        .col-#{$i} {
+            width: calc((100% / #{$colums}) * #{$i})
+        }
+    }
+
+}
+
+@include col-x;

@@ -24,7 +24,7 @@ Route::get('prodotti-paste', function () {
     $data = file_get_contents('../resources/json/data.json');
     $prodotti = json_decode($data,true);
     $pages = ['Home' => '/','Prodotti'=>'prodotti-paste','Contatti'=>'contatti'];
-    return view('pages.prodotti.prodotti', compact('prodotti','pages','data'));
+    return view('pages.prodotti.prodotti', compact('prodotti','pages'));
 });
 
 Route::get('contatti', function () {

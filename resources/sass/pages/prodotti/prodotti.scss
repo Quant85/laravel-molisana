@@ -1,5 +1,2 @@
-.main-prodotti{
-  background-image: url('../img/main/fondo-pag-speciali.jpg');
-  display: flex;
-  flex-flow: column wrap;
-}
+@import '_header';
+@import '_main';

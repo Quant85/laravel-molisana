@@ -1,0 +1,42 @@
+.main-prodotti {
+  background: url('../img/main/fondo-pag-speciali.jpg') no-repeat center center fixed;
+  @include flex(column, wrap);
+  align-content: center;
+  padding: 1.8rem 0;
+
+  .section-tipo {
+    @include flex(column, wrap);
+    align-items: center;
+    h2{
+      font-family: $secondary-font;
+      @include text-set(2rem, 700, 1rem);
+      color: $primary-color;
+      text-shadow: 2px 2px $text-shadow-color;
+    }
+
+    .container-prodotti {
+      width: 1600px;
+        @include flex(row, wrap);
+      .card-prodotto {
+        width: calc(100% / 3);
+        max-width: 100%;
+        padding: 2rem;
+        position: relative;
+        img.img-prodotto{
+          width: 100%;
+        }
+        img.icon-prodotto {
+          width: 10%;
+          display: none;
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+        }
+        &:hover img.icon-prodotto {
+          display: flex;
+        }
+      }
+    }
+  }
+}

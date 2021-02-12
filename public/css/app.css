@@ -10,6 +10,18 @@ html {
   box-sizing: border-box;
 }
 
+body {
+  width: 100vw;
+}
+
+ul {
+  list-style: none;
+}
+ul a {
+  text-decoration: none;
+}
+
+/* #93C7D0 - colore da modificare */
 .navigation {
   background-color: #003434;
   display: flex;
@@ -23,8 +35,84 @@ html {
   justify-content: space-between;
 }
 
-.main-prodotti {
-  background-image: url("../img/main/fondo-pag-speciali.jpg");
+header {
   display: flex;
   flex-flow: column wrap;
+  align-content: center;
+}
+header .jumbotron,
+header nav {
+  width: 100%;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+}
+header nav {
+  background-color: #B1D281;
+}
+header nav ul {
+  display: flex;
+  flex-flow: row wrap;
+}
+header nav ul li {
+  padding: 0.8rem;
+}
+header nav ul a {
+  font-family: "Roboto", Arial, sans-serif;
+  font-size: 1.6rem;
+  font-weight: 400;
+  line-height: normal;
+  color: #ffffff;
+  border-bottom: 4px solid transparent;
+}
+header nav ul a:hover {
+  color: #002D75;
+  border-bottom: 4px solid #002D75;
+  transition: all 0.15s cubic-bezier(0.46, 0.12, 0.39, 0.72);
+}
+
+.main-prodotti {
+  background: url("../img/main/fondo-pag-speciali.jpg") no-repeat center center fixed;
+  display: flex;
+  flex-flow: column wrap;
+  align-content: center;
+  padding: 1.8rem 0;
+}
+.main-prodotti .section-tipo {
+  display: flex;
+  flex-flow: column wrap;
+  align-items: center;
+}
+.main-prodotti .section-tipo h2 {
+  font-family: "PT Sans", Arial, sans-serif;
+  font-size: 2rem;
+  font-weight: 700;
+  line-height: 1rem;
+  color: #063d96da;
+  text-shadow: 2px 2px #ffffff;
+}
+.main-prodotti .section-tipo .container-prodotti {
+  width: 1600px;
+  display: flex;
+  flex-flow: row wrap;
+}
+.main-prodotti .section-tipo .container-prodotti .card-prodotto {
+  width: calc(100% / 3);
+  max-width: 100%;
+  padding: 2rem;
+  position: relative;
+}
+.main-prodotti .section-tipo .container-prodotti .card-prodotto img.img-prodotto {
+  width: 100%;
+}
+.main-prodotti .section-tipo .container-prodotti .card-prodotto img.icon-prodotto {
+  width: 10%;
+  display: none;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.main-prodotti .section-tipo .container-prodotti .card-prodotto:hover img.icon-prodotto {
+  display: flex;
 }

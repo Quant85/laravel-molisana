@@ -1,0 +1,28 @@
+$primary-font: 'Roboto',
+Arial,
+sans-serif;
+$secondary-font: 'PT Sans',
+Arial,
+sans-serif;
+$primary-color: #063d96da;
+$link-color: #ffffff;
+$hover-link-color: #002D75;
+$primary-bg-color: rgba(255, 255, 255, 1);
+
+$primary-bg-color: transparent;
+$secondary-bg-color: transparent;
+$navbar-bg-color:#B1D281;
+/* #93C7D0 - colore da modificare */
+
+$text-shadow-color: #ffffff;
+
+$p-size: 1.4rem;
+$p-weight: 400;
+$p-line-height: 2rem;
+
+@mixin text-set($size:$p-size, $weight:$p-weight, $line-height:$p-line-height) {
+    font-size: $size;
+    font-weight: $weight;
+    line-height: $line-height;
+
+}

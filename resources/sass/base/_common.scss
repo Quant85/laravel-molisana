@@ -1,0 +1,29 @@
+body{
+  width: 100vw;
+}
+
+
+ul {
+    list-style: none;
+
+    a {
+        text-decoration: none;
+    }
+}
+
+//questa sostituisce le due precedenti
+@mixin flex($direction:row, $wrap:wrap) {
+    display: flex;
+    flex-flow: $direction $wrap;
+}
+
+@mixin nav-link-hover {
+    transition: all 0.15s cubic-bezier(0.46, 0.12, 0.39, 0.72);
+}
+
+@mixin section-set($x: 100%, $pd: 65px 0, $color:#58402C, $bgColor:transparent) {
+    width: $x;
+    padding: $pd;
+    background-color: $bgColor;
+    color: $color;
+}
