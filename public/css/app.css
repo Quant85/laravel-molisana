@@ -86,7 +86,7 @@ header nav {
 }
 
 .main-prodotti {
-  background: url("../img/main/fondo-pag-speciali.jpg") no-repeat center center fixed;
+  background: url("../img/prodotti/main/fondo-pag-speciali.jpg") no-repeat center center fixed;
   display: flex;
   flex-flow: column wrap;
   align-content: center;
@@ -104,29 +104,82 @@ header nav {
   line-height: 1rem;
   color: #063d96da;
   text-shadow: 2px 2px #ffffff;
+  padding: 1rem;
 }
 .main-prodotti .section-tipo .container-prodotti {
   width: 1600px;
   display: flex;
   flex-flow: row wrap;
 }
-.main-prodotti .section-tipo .container-prodotti .card-prodotto {
-  width: calc(100% / 3);
+
+.card-prodotto {
+  width: calc((100% / 3) - 4%);
   max-width: 100%;
-  padding: 2rem;
+  margin: 2%;
   position: relative;
+  overflow: hidden;
+  z-index: 2;
+  transition: 0.8s ease-in-out;
 }
-.main-prodotti .section-tipo .container-prodotti .card-prodotto img.img-prodotto {
+.card-prodotto img.img-prodotto {
   width: 100%;
+  display: block;
+  transition: 2s ease-in-out;
 }
-.main-prodotti .section-tipo .container-prodotti .card-prodotto img.icon-prodotto {
-  width: 10%;
-  display: none;
+.card-prodotto:hover img.img-prodotto {
+  transform: scale(1.05);
+  filter: grayscale(60%) blur(3px);
+}
+.card-prodotto .info-prodotto {
+  width: 80%;
+  display: flex;
+  flex-flow: column wrap;
+  text-transform: capitalize;
+  align-content: center;
+  font-family: "PT Sans", Arial, sans-serif;
+  font-weight: 400;
+  line-height: 1.4rem;
+  opacity: 0;
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+  transition: 1.5s ease-in-out;
+  cursor: default;
 }
-.main-prodotti .section-tipo .container-prodotti .card-prodotto:hover img.icon-prodotto {
+.card-prodotto .info-prodotto li:first-of-type {
+  text-align: center;
+}
+.card-prodotto .info-prodotto a:visited {
+  color: #063d96da;
+}
+.card-prodotto .info-prodotto img.icon-prodotto {
+  width: 2.5rem;
+}
+.card-prodotto:hover .info-prodotto {
+  opacity: 1;
+  color: #0d41dd;
+  text-shadow: 2px 1px 1px #ffffff;
+  font-size: 1.4rem;
+  line-height: 2rem;
+}
+.card-prodotto:hover {
+  border-radius: 5%;
+}
+
+main.scheda-prodotto {
   display: flex;
+  flex-flow: row wrap;
+  justify-content: space-around;
+}
+main.scheda-prodotto .info {
+  width: 50%;
+  margin: 2%;
+  font-family: "Roboto", Arial, sans-serif;
+  letter-spacing: 1px;
+  font-weight: 400;
+  line-height: 1.4rem;
+}
+main.scheda-prodotto .info h2 {
+  padding-bottom: 1rem;
 }

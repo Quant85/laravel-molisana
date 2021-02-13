@@ -15,15 +15,15 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
 
-    $pages = ['home' => '/','prodotti'=>'prodotti-paste','contatti'=>'contatti'];
+    $pages = ['home' => 'home','prodotti'=>'prodotti','contatti'=>'contatti'];
     return view('pages.home.home',compact('pages'));
 })->name('home');
 
-Route::get('prodotti-paste', function () {
+Route::get('/prodotti-paste', function () {
     //file_get_contents(path, include_path, context, start, max_length)  legge il contenuto di un file in una stringa e migliora le prestazioni
     $data = file_get_contents('../resources/json/data.json');
     $prodotti = json_decode($data,true);
-    $pages = ['home' => '/','prodotti'=>'prodotti-paste','contatti'=>'contatti'];
+    $pages = ['home' => 'home','prodotti'=>'prodotti','contatti'=>'contatti'];
     //dd($prodotti['data']);
     //https://laravel.com/docs/7.x/helpers#method-array-where
     // $lunga = Arr::where($prodotti['data'],function($value,$key){
@@ -38,8 +38,16 @@ Route::get('prodotti-paste', function () {
     return view('pages.prodotti.prodotti', compact('prodotti','pages'));
 })->name('prodotti');
 
+Route::get( 'prodotti-paste/{id}', function ($id){
+    $data = json_decode(file_get_contents('../resources/json/data.json'),true);
+    $prodotto = $data['data'][$id];
+    $pages = ['home' => 'home','prodotti'=>'prodotti','contatti'=>'contatti'];/* attenzione a collegare il 'name' della route dell'href */
+    return view('pages.prodotti.prodotto.scheda-prodotto', compact('prodotto','id','pages'));
+})->name('prodotto');
 
 
-Route::get('contatti', function () {
-    return view('pages.contatti.contatti');
-})->name('prodotti');
+Route::get('/contatti', function () {
+
+    $pages = ['home' => 'home','prodotti'=>'prodotti','contatti'=>'contatti'];
+    return view('pages.contatti.contatti', compact('pages'));
+})->name('contatti');
