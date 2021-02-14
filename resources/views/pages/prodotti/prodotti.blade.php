@@ -15,3 +15,7 @@
 @section('main')
     @include('pages.prodotti.main')
 @endsection
+
+@section('footer')
+    @include('layout.footer.footer')
+@endsection

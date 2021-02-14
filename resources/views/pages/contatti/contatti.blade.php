@@ -15,3 +15,7 @@
 @section('main')
     @include('pages.contatti.main')
 @endsection
+
+@section('footer')
+    @include('layout.footer.footer')
+@endsection

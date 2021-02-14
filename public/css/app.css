@@ -47,6 +47,80 @@ nav ul .active {
   transition: all 0.15s cubic-bezier(0.46, 0.12, 0.39, 0.72);
 }
 
+footer .footer-header {
+  width: 100%;
+}
+footer .footer-header h2 {
+  line-height: 1.5rem;
+  color: #f1f1f1;
+  background-color: #05064a;
+  font-size: 1.5rem;
+  text-align: center;
+  text-transform: uppercase;
+  padding: 1% 0;
+}
+footer .footer-main {
+  display: flex;
+  width: 80%;
+  justify-content: center;
+  margin: 100px auto 0 auto;
+}
+footer .footer-main .footer-col {
+  width: 25%;
+  padding: 0 2%;
+  cursor: default;
+}
+footer .footer-main .footer-col ul {
+  margin-bottom: 1.4rem;
+}
+footer .footer-main .footer-col h2 {
+  color: #0d2240;
+  font-family: "PT Sans", Arial, sans-serif;
+  font-weight: 600;
+  font-size: 1.6rem;
+  line-height: 1.3em;
+  text-transform: uppercase;
+  margin-bottom: 10px;
+}
+footer .footer-main .footer-col a {
+  color: gray;
+  font-weight: 400;
+  line-height: 1.4em;
+  text-transform: capitalize;
+}
+footer .footer-main .news {
+  color: grey;
+}
+footer .footer-main .news:hover {
+  color: #0d2240;
+}
+footer .footer-main .news li > a::before {
+  content: ">>";
+}
+footer .footer-main .info-azienda {
+  font-size: 0.75rem;
+  line-height: 1.6em;
+  color: gray;
+  font-weight: 400;
+  text-transform: uppercase;
+}
+footer .footer-main .info-azienda .info-name, footer .footer-main .info-azienda a {
+  font-weight: bold;
+}
+footer .footer-main .info-azienda a {
+  text-decoration: underline;
+  text-transform: uppercase;
+}
+footer .footer-main .info-azienda a:hover {
+  color: #0d2240;
+}
+footer .footer-main .info-azienda .box-number {
+  margin-top: 40px;
+}
+footer .footer-bottom img {
+  width: 100%;
+}
+
 nav {
   background-color: #B1D281;
 }

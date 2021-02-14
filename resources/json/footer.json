@@ -1,0 +1,71 @@
+{
+  "sezione-1" :
+  {
+    "pastificio" : 
+    {
+      "il pastifico" : "/pastifico",
+      "grano decorticato a pietra" : "/grano-decorticato-a-pietra",
+      "il molise c'è" : "/molisana-esiste",
+      "filiera integrata" : "/filiera-integrata",
+      "100 anni di pasta" : "/cento-anni-di-pasta",
+      "storia della pasta" : "/storia-della-pasta",
+      "spaghetto quadrato" : "/spaghetto-quadrato",
+      "le persone" : "/le-persone"
+    },
+    "prodotti" : 
+    {
+      "le classiche" : "/le-classiche",
+      "le integrali" : "/le-integrali",
+      "le speciali" : "/le-speciali",
+      "le biologiche" : "/le-biologiche",
+      "le gluten free" : "/le-gluten-free",
+      "le semole" : "/le-semole",
+      "le extra di lusso" : "/le-extra-di-lusso"
+    }
+  },
+  "sezione-2" :
+  {
+    "collezione da chef" : 
+    {
+      "collezione da chef" : "/collezione-da-chef",
+      "grandi cucine" : "/grandi-cucine",
+      "biologiche" : "/biologiche",
+      "quadrate" : "/quadrate"
+    },
+    "limited edition" : 
+    {
+      
+    },
+    "news" : 
+    {
+      "e-commerce" : "https://www.ventis.it/enogastronomia/pasta#?brand=La+Molisana",
+      "b2b" : "/b2b",
+      "scarica i cataloghi" : "/scarica-i-cataloghi",
+      "rassegna stampa" : "/rassegna-stampa",
+      "video" : "/video",
+      "contatti" : "/contatti",
+      "lavora con noi" : "/lavora-con-noi",
+      "certificazioni" : "/certificazioni",
+      "privacy policy" : "/privacy-policy"
+    }
+  },
+  "sezione-3" :
+  {
+    "info" : 
+    {
+      "ragione sociale" : "la molisana s.p.a",
+      "sede legale" : "contrada colle delle api, 100/A-86100-campobasso (CB)",
+      "pec" : "lamolisana@pec",
+      "tel" : "+39 0874 4981",
+      "fax" : "+39 0874 629584"
+    },
+    "contatti-azienda" : {
+      "email-segnalazioni" : "info@lamolisana.it",
+      "email-commerciale" : "commerciale@lamolisana.it",
+      "email-export" : "export@lamolisana.it",
+      "numero-verde" : 800818081,
+      "whatsapp" : 3801292455,
+      "dati-aziendali" : "/dati-aziendali"
+    }
+  }
+}

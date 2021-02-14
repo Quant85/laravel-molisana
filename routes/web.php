@@ -16,7 +16,8 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
 
     $pages = ['home' => 'home','prodotti'=>'prodotti','contatti'=>'contatti'];
-    return view('pages.home.home',compact('pages'));
+    $footer = json_decode(file_get_contents('../resources/json/footer.json'),true);
+    return view('pages.home.home',compact('pages','footer'));
 })->name('home');
 
 Route::get('/prodotti-paste', function () {
@@ -35,19 +36,22 @@ Route::get('/prodotti-paste', function () {
     //$cortissima = Arr::where($prodotti['data'],function($value,$key){
     //    return $value['tipo'] == 'cortissima';
     //});
-    return view('pages.prodotti.prodotti', compact('prodotti','pages'));
+    $footer = json_decode(file_get_contents('../resources/json/footer.json'),true);
+    return view('pages.prodotti.prodotti', compact('prodotti','pages','footer'));
 })->name('prodotti');
 
 Route::get( 'prodotti-paste/{id}', function ($id){
     $data = json_decode(file_get_contents('../resources/json/data.json'),true);
     $prodotto = $data['data'][$id];
     $pages = ['home' => 'home','prodotti'=>'prodotti','contatti'=>'contatti'];/* attenzione a collegare il 'name' della route dell'href */
-    return view('pages.prodotti.prodotto.scheda-prodotto', compact('prodotto','id','pages'));
+    $footer = json_decode(file_get_contents('../resources/json/footer.json'),true);
+    return view('pages.prodotti.prodotto.scheda-prodotto', compact('prodotto','id','pages','footer'));
 })->name('prodotto');
 
 
 Route::get('/contatti', function () {
 
     $pages = ['home' => 'home','prodotti'=>'prodotti','contatti'=>'contatti'];
-    return view('pages.contatti.contatti', compact('pages'));
+    $footer = json_decode(file_get_contents('../resources/json/footer.json'),true);
+    return view('pages.contatti.contatti', compact('pages','footer'));
 })->name('contatti');
